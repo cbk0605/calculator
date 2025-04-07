@@ -1,14 +1,18 @@
 # ui.py
 
-from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, QMessageBox, QPlainTextEdit, QHBoxLayout) # type: ignore
+from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, QMessageBox, QPlainTextEdit, QHBoxLayout, QLabel) # type: ignore
 from PyQt5.QtGui import QIcon # type: ignore
+from PyQt5.QtCore import QDate, Qt # type: ignore 
 
 class View(QWidget):
+
     def __init__(self):
         super().__init__()
+        self.date = QDate.currentDate() # Current date
         self.initUi()
 
     def initUi(self):
+        self.lbl1 = QLabel(self.date.toString(Qt.DefaultLocaleLongDate), self)
         self.te1 = QPlainTextEdit()
         self.te1.setReadOnly(True)
 
@@ -26,6 +30,7 @@ class View(QWidget):
         vbox = QVBoxLayout()
         vbox.addWidget(self.te1)
         vbox.addLayout(hbox)
+        vbox.addWidget(self.lbl1)
         vbox.addStretch(1)
 
         self.setLayout(vbox)

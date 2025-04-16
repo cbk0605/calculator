@@ -1,8 +1,8 @@
 # ui.py
 
-from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, QMessageBox, QPlainTextEdit, QHBoxLayout, QLineEdit, QcomboBox) # type: ignore
+from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, QMessageBox, QPlainTextEdit, QHBoxLayout, QLineEdit, QComboBox) # type: ignore
 from PyQt5.QtGui import QIcon # type: ignore
-from PyQt5 import QtCore
+from PyQt5 import QtCore # type: ignore
 
 class View(QWidget):
     def __init__(self):

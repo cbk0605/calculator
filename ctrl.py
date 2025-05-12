@@ -14,4 +14,8 @@ class Control:
         #self.view.btn1.clicked.connect(self.view.activateMessage) 
         self.view.btn1.clicked.connect(self.calculate)  
         self.view.btn2.clicked.connect(self.view.clearMessage)
-        
+
+    def sum(self, a, b):    # Placeholder for sum logic
+        return a + b
+    
+

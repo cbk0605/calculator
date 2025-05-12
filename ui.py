@@ -15,7 +15,9 @@ class View(QWidget):
 
         self.le1=QLineEdit('0',self)
         self.le1.setAlignment(QtCore.Qt.AlignRight)
-
+        self.le1.setFocus(True) # Set focus to the first line edit
+        self.le1.selectAll()    # Select all text in the first line edit
+        
         self.le2=QLineEdit('0',self)
         self.le2.setAlignment(QtCore.Qt.AlignRight)
 
@@ -27,11 +29,11 @@ class View(QWidget):
         self.formular.addWidget(self.cb)
         self.formular.addWidget(self.le2)
         
-        self.btn1 = QPushButton('Message', self)
-        # self.btn1.clicked.connect(self.activateMessage)
+        self.btn1 = QPushButton('Calc', self)
+        self.btn1.clicked.connect(self.setDisplay)
 
         self.btn2 = QPushButton('Clear', self)
-        # self.btn2.clicked.connect(self.clearMessage)
+        self.btn2.clicked.connect(self.clearMessage)
 
         hbox = QHBoxLayout()
         hbox.addStretch(1)
@@ -51,7 +53,7 @@ class View(QWidget):
         self.resize(256, 256)
         self.show()
 
-    def activateMessage(self, text):
+    def setDisplay(self,text):   # 메서드 이름 변경
         self.te1.appendPlainText(text)
 
     def clearMessage(self):

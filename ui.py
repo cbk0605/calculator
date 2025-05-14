@@ -30,10 +30,10 @@ class View(QWidget):
         self.formular.addWidget(self.le2)
         
         self.btn1 = QPushButton('Calc', self)
-        self.btn1.clicked.connect(self.setDisplay)
+        #self.btn1.clicked.connect(self.setDisplay)
 
         self.btn2 = QPushButton('Clear', self)
-        self.btn2.clicked.connect(self.clearMessage)
+        #self.btn2.clicked.connect(self.clearMessage)
 
         hbox = QHBoxLayout()
         hbox.addStretch(1)

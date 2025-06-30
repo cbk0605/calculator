@@ -29,13 +29,25 @@ class Control:
     def mul(self, a, b):    # 곱셈 함수 추가
         return a*b
     
-    def div(self, a, b):    # 나눗셈 함수 추가
-        if b == 0:
-            return 'Division by zero error'
+    def div(self, a, b):    # 예외 처리를 사용하도록 수정
+        try:
+            if (b==0):  # 0으로 나누는 경우 예외 처리
+                raise Exception("Divisor Error")  
+            
+        except Exception as e:
+            return e
+        
         return a / b 
     
-    def pow(self, a, b):    # 거듭제곱 함수 추가
+    def pow(self, a, b):    # 거듭제곱 함수 수정
+        try:
+            if (a==0):
+                raise Exception("Base Error")
+        except Exception as e:
+            return e
+        
         return pow(a, b)
+        
     
     
 

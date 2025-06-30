@@ -7,7 +7,7 @@ from ctrl import Control
 from PyQt5.QtWidgets import QApplication # type: ignore
 
 def main():
-    calc = QApplication(sys.argv)
+#    calc = QApplication(sys.argv)
     app= QApplication(sys.argv)  # QApplication 객체 생성
     view = View()
     Control(view=view)  # Control 객체 생성

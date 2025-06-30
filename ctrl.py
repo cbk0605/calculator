@@ -31,7 +31,7 @@ class Control:
     
     def div(self, a, b):    # 나눗셈 함수 추가
         if b == 0:
-            return 'Division by zero error'
+            return 0
         return a / b 
     
     def pow(self, a, b):    # 거듭제곱 함수 추가

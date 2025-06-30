@@ -20,7 +20,23 @@ class Control:
         self.view.btn1.clicked.connect(lambda:self.view.setDisplay(self.calculate()))  
         self.view.btn2.clicked.connect(self.view.clearMessage)
 
-    def sum(self, a, b):    # 예외 처리 추가
+    def sum(self, a, b):    # 덧셈 함수 추가
         return a+b
     
+    def sub(self, a, b):    # 뺄셈 함수 추가
+        return a-b
         
+    def mul(self, a, b):    # 곱셈 함수 추가
+        return a*b
+    
+    def div(self, a, b):    # 나눗셈 함수 추가
+        if b == 0:
+            return 'Division by zero error'
+        return a / b 
+    
+    def pow(self, a, b):    # 거듭제곱 함수 추가
+        return pow(a, b)
+    
+    
+
+    
